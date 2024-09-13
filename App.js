@@ -1,100 +1,67 @@
-import logo from "./logo.svg";
-import "./App.css";
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
     <>
-      <form classname="row g-3 needs-validation" novalidate>
-  <div classname="col-md-4">
-    <label for="validationCustom01" classname="form-label">First name</label>
-    <input type="text" classname="form-control" id="validationCustom01" value="Mark" required/>
-    <div classname="valid-feedback">
-      Looks good!
+    <nav class="nav">
+      <a class="nav-link active" aria-current="page" href="#">Home</a>
+      <a class="nav-link" href="/">About</a>
+     <a class="nav-link" href="/">Products</a>
+      <a class="nav-link disabled" aria-disabled="true">Contacts</a>
+
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+     </nav>
+     <br></br>
+    <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Accordion Item #1
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
     </div>
-  </div>
-  <div classname="col-md-4">
-    <label for="validationCustom02" classname="form-label">Last name</label>
-    <input type="text" classname="form-control" id="validationCustom02" value="Otto" required/>
-    <div classname="valid-feedback">
-      Looks good!
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Accordion Item #2
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
     </div>
-  </div>
-  <div classname="col-md-4">
-    <label for="validationCustomUsername" classname="form-label">Username</label>
-    <div classname="input-group has-validation">
-      <span classname="input-group-text" id="inputGroupPrepend">@</span>
-      <input type="text" classname="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required/>
-      <div classname="invalid-feedback">
-        Please choose a username.
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Accordion Item #3
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
       </div>
     </div>
   </div>
-  <div classname="col-md-6">
-    <label for="validationCustom03" classname="form-label">City</label>
-    <input type="text" classname="form-control" id="validationCustom03" required/>
-    <div classname="invalid-feedback">
-      Please provide a valid city.
-    </div>
-  </div>
-  <div classname="col-md-3">
-    <label for="validationCustom04" classname="form-label">State</label>
-    <select classname="form-select" id="validationCustom04" required>
-      <option selected disabled value="">Choose...</option>
-      <option>...</option>
-    </select>
-    <div classname="invalid-feedback">
-      Please select a valid state.
-    </div>
-  </div>
-  <div classname="col-md-3">
-    <label for="validationCustom05" classname="form-label">Zip</label>
-    <input type="text" classname="form-control" id="validationCustom05" required/>
-    <div classname="invalid-feedback">
-      Please provide a valid zip.
-    </div>
-  </div>
-  <div classname="col-12">
-    <div classname="form-check">
-      <input classname="form-check-input" type="checkbox" value="" id="invalidCheck" required/>
-      <label classname="form-check-label" for="invalidCheck">
-        Agree to terms and conditions
-      </label>
-      <div classname="invalid-feedback">
-        You must agree before submitting.
-      </div>
-    </div>
-  </div>
-  <div classname="col-12">
-    <button classname="btn btn-primary" type="submit">Submit form</button>
-  </div>
-</form>
-    </>
+  <div classname="btn-group" role="group" aria-label="Basic outlined example">
+  <button type="button" classname="btn btn-outline-primary">Left</button>
+  <button type="button" classname="btn btn-outline-primary">Middle</button>
+  <button type="button" classname="btn btn-outline-primary">Right</button>
+</div>
+  </>
+
   );
 }
-// function APP2 ()
-// {
-//   return(
-//     <>
-//     <nav classname="navbar navbar-expand-lg bg-body-tertiary">
-//   <div classname="container-fluid">
-//     <a classname="navbar-brand" href="#">Navbar</a>
-//     <button classname="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-//       <span classname="navbar-toggler-icon"></span>
-//     </button>
-//     <div classname="collapse navbar-collapse" id="navbarNavAltMarkup">
-//       <div classname="navbar-nav">
-//         <a classname="nav-link active" aria-current="page" href="#">Home</a>
-//         <a classname="nav-link" href="#">Features</a>
-//         <a classname="nav-link" href="#">Pricing</a>
-//         <a classname="nav-link disabled" aria-disabled="true">Disabled</a>
-//       </div>
-//     </div>
-//   </div>
-// </nav>
-//     </>
-//   );
-// }
-  
- 
-export default App;
 
+export default App;
